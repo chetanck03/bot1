@@ -60,8 +60,12 @@ const index = () => {
                 />
               ):activeComponent=="Pricing"?(
                 <Price/>
+              ):activeComponent=="Profile"?(
+                <Profile setActiveComponent={setActiveComponent}
+                notifyError={notifyError} notifySuccess={notifySuccess}/>
               ):activeComponent=="Setting"?(
-                <Setting/>
+                <Setting notifyError={notifyError} notifySuccess={notifySuccess}
+                axios={axios}/>
               ):activeComponent=="Add Token Pair"?(
                 <AddTokenPair/>
               ):(
